@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/Inter/Inter-Bold.woff2?v=3.19") format("woff2"), url("../fonts/Inter/Inter-Bold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Inter/Inter-Medium.woff2?v=3.19") format("woff2"), url("../fonts/Inter/Inter-Medium.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Inter/Inter-Regular.woff2?v=3.19") format("woff2"), url("../fonts/Inter/Inter-Regular.woff?v=3.19") format("woff");
+}
+body {
+  color: #fff;
+  font-family: Inter, sans-serif;
+}
+
+.header {
+  padding-top: 20px;
+  background: rgba(0, 136, 165, 0.6);
+  text-align: center;
+}
+.header img {
+  display: block;
+  margin: auto;
+}
+.header h1 {
+  margin-top: 54px;
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.header h3 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 75px;
+}
+.header__button {
+  display: block;
+  width: 100%;
+  background: rgba(58, 160, 182, 0.5);
+  border: 1px solid #FFFFFF;
+  border-radius: 35px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 11.5px 17px;
+  margin-bottom: 114px;
+}
+
+.about {
+  background: #082030;
+}
+
+.feedback {
+  background: #F7F7F7;
+}
+
+.footer {
+  background: #C8972C;
+}
