@@ -36,7 +36,9 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 160%;
+  margin-bottom: 0;
 }
+
 @mixin css3-prefix($property, $value) {
   -webkit-#{$property}: #{$value};
   -khtml-#{$property}: #{$value};
@@ -60,4 +62,4 @@ p {
   @include css3-prefix('transform', $params);
 }
 
-$about__bg-color:#082030;
+$about__bg-color: #082030;

@@ -28,12 +28,13 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 160%;
+  margin-bottom: 0;
 }
 
 .header {
   padding-top: 20px;
   background-color: rgba(0, 136, 165, 0.6);
-  background-image: url("../image/header__bg-image--mobile.png");
+  background-image: url("../image/header__bg-image_mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -100,6 +101,11 @@ p {
   top: 100%;
   left: 0;
   right: 0;
+  -webkit-transform: rotate(351deg) skewX(358deg);
+  -khtml-transform: rotate(351deg) skewX(358deg);
+  -moz-transform: rotate(351deg) skewX(358deg);
+  -ms-transform: rotate(351deg) skewX(358deg);
+  -o-transform: rotate(351deg) skewX(358deg);
   transform: rotate(351deg) skewX(358deg);
   width: 179%;
   height: 68px;
@@ -129,6 +135,27 @@ p {
   font-size: 26px;
   line-height: 150%;
   margin-bottom: 24px;
+}
+
+.join-us {
+  padding-top: 40px;
+  background-color: #082030;
+}
+.join-us h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #C8972C;
+  margin-bottom: 0;
+}
+.join-us h6 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+  text-align: right;
 }
 
 .feedback {

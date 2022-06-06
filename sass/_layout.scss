@@ -1,7 +1,7 @@
 .header {
   padding-top: 20px;
   background-color: rgba(0, 136, 165, 0.6);
-  background-image: url("../image/header__bg-image--mobile.png");
+  background-image: url("../image/header__bg-image_mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -34,13 +34,13 @@
   }
 
   &__button {
-    $header__button__bg: rgba(58, 160, 182);
-    $header__button--hover__bg: fade-out($header__button__bg, 0);
-    $header__button--default__bg: fade-out($header__button__bg, 0.5);
+    $header__button_bg: rgba(58, 160, 182);
+    $header__button_hover__bg: fade-out($header__button_bg, 0);
+    $header__button_default__bg: fade-out($header__button_bg, 0.5);
 
     display: block;
     width: 100%;
-    background: $header__button--default__bg;
+    background: $header__button_default__bg;
     border: 1px solid #FFFFFF;
     border-radius: 35px;
     font-size: 14px;
@@ -55,7 +55,7 @@
     @include transition();
 
     &:hover {
-      background: $header__button--hover__bg;
+      background: $header__button_hover__bg;
     }
   }
 
@@ -108,6 +108,29 @@
     margin-bottom: 24px;
   }
 
+}
+
+.join-us {
+  padding-top: 40px;
+  background-color: $about__bg-color;
+
+  h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #C8972C;
+    margin-bottom: 0;
+  }
+
+  h6 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 160%;
+    text-align: right;
+  }
 }
 
 .feedback {
