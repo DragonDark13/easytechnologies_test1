@@ -73,17 +73,17 @@
       top: 100%;
       left: 0;
       right: 0;
-      transform: rotate(351deg) skewX(358deg);
+      @include transform(rotate(351deg) skewX(358deg));
       width: 179%;
       height: 68px;
-      background: #082030;
+      background: $about__bg-color;
     }
   }
 
 }
 
 .about {
-  background: #082030;
+  background: $about__bg-color;
   padding-top: 18px;
 
   h2 {
