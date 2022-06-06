@@ -1,0 +1,119 @@
+.header {
+  padding-top: 20px;
+  background-color: rgba(0, 136, 165, 0.6);
+  background-image: url("../image/header__bg-image--mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+  overflow: hidden;
+
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  h1 {
+    margin-top: 54px;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 75px;
+  }
+
+  &__button {
+    $header__button__bg: rgba(58, 160, 182);
+    $header__button--hover__bg: fade-out($header__button__bg, 0);
+    $header__button--default__bg: fade-out($header__button__bg, 0.5);
+
+    display: block;
+    width: 100%;
+    background: $header__button--default__bg;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 11.5px 17px;
+    margin-bottom: 114px;
+    @include transition();
+
+    &:hover {
+      background: $header__button--hover__bg;
+    }
+  }
+
+  &__triangle-bg {
+    width: 100%;
+    height: 0;
+    padding-top: 55px;
+    position: relative;;
+
+    &:after {
+      transform-origin: top left;
+      content: "";
+      position: absolute;
+      display: block;
+      top: 100%;
+      left: 0;
+      right: 0;
+      transform: rotate(351deg) skewX(358deg);
+      width: 179%;
+      height: 68px;
+      background: #082030;
+    }
+  }
+
+}
+
+.about {
+  background: #082030;
+  padding-top: 18px;
+
+  h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: uppercase;
+    color: #C8972C;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-weight: 400;
+    margin-top: -10px;
+    margin-right: -9px;
+    text-align: right;
+    font-size: 26px;
+    line-height: 150%;
+    margin-bottom: 24px;
+  }
+
+}
+
+.feedback {
+  background: #F7F7F7;
+}
+
+.footer {
+  background: #C8972C;
+}
