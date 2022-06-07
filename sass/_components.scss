@@ -1,0 +1,72 @@
+.job-offers-list {
+  //counter-reset: section;
+  list-style: none;
+
+
+
+
+  &__item {
+    border-top: 1px solid #415867;
+    padding-top: 15px;
+
+    &__number-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__vertical-divider {
+      position: absolute;
+      width: 1px;
+      height: 29px;
+      background-color: #415867;
+      display: block;
+      right: 8px;
+      top: -9px;
+      @include transform(rotate(17deg));
+      transform-origin: bottom left;
+    }
+
+    &__number {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #415867;
+    }
+
+    .position-list {
+
+      &__position-name {
+        display: block;
+
+        &:after {
+          content: '/';
+          padding-left: 5px;
+        }
+
+      }
+    }
+
+    &__show-more-block {
+      margin-top: 5px;
+      margin-bottom: 12px;
+    }
+
+
+    &__show-more-button {
+      cursor: pointer;
+      border: none;
+      margin: 0;
+      display: block;
+      @include transition();
+      background-color: #415867;
+      @include circle(35px);
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+  }
+
+
+}

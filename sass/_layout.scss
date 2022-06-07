@@ -82,8 +82,16 @@
 
 }
 
+.about-and-join-us {
+  background-color: $about__bg-color;
+  background-image: url("../image/join-us__bg-image.svg");
+  background-repeat: round;
+  background-position: center center;
+  //background-size: cover;
+
+}
+
 .about {
-  background: $about__bg-color;
   padding-top: 18px;
 
   h2 {
@@ -94,7 +102,7 @@
     letter-spacing: 0em;
     text-align: left;
     text-transform: uppercase;
-    color: #C8972C;
+    color: $section__header_color;
     margin-bottom: 0;
   }
 
@@ -112,7 +120,10 @@
 
 .join-us {
   padding-top: 40px;
-  background-color: $about__bg-color;
+
+  &__header {
+    margin-bottom: 20px;
+  }
 
   h2 {
     font-style: normal;
@@ -120,16 +131,24 @@
     font-size: 24px;
     line-height: 29px;
     text-transform: uppercase;
-    color: #C8972C;
+    color: $section__header_color;
     margin-bottom: 0;
   }
 
   h6 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 160%;
     text-align: right;
+    margin-bottom: 0;
+  }
+
+  a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    @include transition();
+
+    &:hover {
+      color: #9BB3C2;
+    }
   }
 }
 
@@ -138,5 +157,5 @@
 }
 
 .footer {
-  background: #C8972C;
+  background: $section__header_color;
 }

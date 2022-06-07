@@ -39,6 +39,22 @@ p {
   margin-bottom: 0;
 }
 
+ul {
+  padding-left: 0;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+}
+
 @mixin css3-prefix($property, $value) {
   -webkit-#{$property}: #{$value};
   -khtml-#{$property}: #{$value};
@@ -62,4 +78,20 @@ p {
   @include css3-prefix('transform', $params);
 }
 
+@mixin size($w,$h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin circle($size) {
+  @include square($size);
+  border-radius: 50%;
+}
+
 $about__bg-color: #082030;
+$section__header_color: #C8972C;
