@@ -216,6 +216,11 @@
     color: #FFFFFF;
     border: none;
     padding: 18px;
+    @include transition();
+
+    &:hover {
+          box-shadow: inset fade-out(darken($section__header_color,20%),0.7) 5px -4px 20px 1px;;
+    }
   }
 }
 
@@ -227,7 +232,7 @@
   .create-a-job-alert-button {
     width: 100%;
     margin-top: $spacer*1.25;
-    padding: 6.25px;
+    padding: 5.25px;
     background: #FFFFFF;
     border-radius: 46.0973px;
     font-weight: 500;
@@ -236,5 +241,14 @@
     text-align: center;
     text-transform: uppercase;
     color: $section__header_color;
+    @include transition();
+    border: 1px solid transparent;
+
+
+    &:hover {
+      background: $section__header_color;
+      color: #fff;
+      border: 1px solid #fff;
+    }
   }
 }

@@ -297,6 +297,15 @@ button {
   color: #FFFFFF;
   border: none;
   padding: 18px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -khtml-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.contacts__button:hover {
+  box-shadow: inset rgba(116, 88, 26, 0.3) 5px -4px 20px 1px;
 }
 
 .footer {
@@ -307,7 +316,7 @@ button {
 .footer .create-a-job-alert-button {
   width: 100%;
   margin-top: 20px;
-  padding: 6.25px;
+  padding: 5.25px;
   background: #FFFFFF;
   border-radius: 46.0973px;
   font-weight: 500;
@@ -316,6 +325,18 @@ button {
   text-align: center;
   text-transform: uppercase;
   color: #C8972C;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -khtml-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  border: 1px solid transparent;
+}
+.footer .create-a-job-alert-button:hover {
+  background: #C8972C;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .job-offers-list__item {
