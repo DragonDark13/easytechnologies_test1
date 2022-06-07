@@ -1,8 +1,4 @@
 .job-offers-list {
-  //counter-reset: section;
-  list-style: none;
-
-
 
 
   &__item {
@@ -64,6 +60,45 @@
       &:hover {
         background-color: #fff;
       }
+    }
+
+  }
+
+
+}
+
+
+.blog-list {
+
+
+  .blog-item {
+
+    &__inner_container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__text-content {
+      @include absolute(0, 0, 0, 0);
+      @include square(100%);
+      background: linear-gradient(180deg, rgba(8, 32, 48, 0) 30.21%, #082030 100%);
+      padding: 35px 0px;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: end;
+
+      & > .row {
+        width: 100%;
+      }
+    }
+
+    &__category {
+      @include text-shorten();
+    }
+
+    &__title {
+      margin-bottom: 0;
+     @include ellipsis(2);
     }
 
   }

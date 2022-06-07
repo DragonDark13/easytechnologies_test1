@@ -25,6 +25,9 @@
   url("../fonts/Inter/Regular/Inter-Regular.woff?v=3.19") format("woff");
 }
 
+$about__bg-color: #082030;
+$section__header_color: #C8972C;
+
 
 body {
   color: #fff;
@@ -43,6 +46,22 @@ ul {
   padding-left: 0;
 }
 
+h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  color: $section__header_color;
+  margin-bottom: 0;
+}
+
+ul{
+    list-style: none;
+}
+
 h5 {
   font-weight: 400;
   font-size: 18px;
@@ -53,6 +72,10 @@ h6 {
   font-weight: 400;
   font-size: 12px;
   line-height: 160%;
+}
+
+img{
+  max-width: 100%;
 }
 
 @mixin css3-prefix($property, $value) {
@@ -93,5 +116,33 @@ h6 {
   border-radius: 50%;
 }
 
-$about__bg-color: #082030;
-$section__header_color: #C8972C;
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+@mixin text-shorten {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+@mixin ellipsis($rowCount: 1) {
+  @if $rowCount <=1 {
+    @include text-shorten();
+  } @else {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $rowCount;
+    -webkit-box-orient: vertical;
+  }
+}

@@ -7,7 +7,21 @@
   background-position: center center;
   text-align: center;
   overflow: hidden;
+  position: relative;
 
+  &:before {
+    content: '';
+    pointer-events: none;
+    @include square(100%);
+    background: rgba(0, 136, 165, 0.6);
+    @include absolute(0,0,0,0);
+    z-index: 0;
+  }
+
+  &>*{
+    position: relative;
+    z-index: 2;
+  }
 
   img {
     display: block;
@@ -94,17 +108,6 @@
 .about {
   padding-top: 18px;
 
-  h2 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 150%;
-    letter-spacing: 0em;
-    text-align: left;
-    text-transform: uppercase;
-    color: $section__header_color;
-    margin-bottom: 0;
-  }
 
   h4 {
     font-weight: 400;
@@ -150,6 +153,33 @@
       color: #9BB3C2;
     }
   }
+}
+
+.blog-news {
+
+  &__view-more {
+    text-decoration: none;
+    cursor: pointer;
+    color: $section__header_color;
+    display: block;
+
+    &:hover {
+      color: $section__header_color;
+    }
+
+  }
+
+  &__header-container {
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+
+    .header-container__divider{
+      width: 100%;
+      height: 1px;
+      background-color: $section__header_color;
+    }
+  }
+
 }
 
 .feedback {
