@@ -182,7 +182,7 @@
   background: #F7F7F7;
   color: #8095A4;
   padding-top: $spacer*2.5;
-  padding-bottom:$spacer*2.5;
+  padding-bottom: $spacer*2.5;
 
   &__title {
     text-transform: none;
@@ -203,6 +203,7 @@
   }
 
   &__button {
+    margin-top: map-get($gutters, 4);
     background: linear-gradient(223.08deg, #FFC953 6.11%, #C8972C 97.63%);
     border-radius: 45px;
     width: 100%;

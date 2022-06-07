@@ -57,6 +57,15 @@ h3 {
   color: #C8972C;
 }
 
+h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
 h5 {
   font-weight: 400;
   font-size: 18px;
@@ -269,6 +278,7 @@ textarea {
   margin-bottom: 8px;
 }
 .contacts__button {
+  margin-top: 24px;
   background: linear-gradient(223.08deg, #FFC953 6.11%, #C8972C 97.63%);
   border-radius: 45px;
   width: 100%;
