@@ -14,7 +14,7 @@
             <div class="col-11">
                 <img src="image/header-logo.svg" alt="header-logo">
                 <h1>Out-Source Tech Service</h1>
-                <h3>Тo customers worldwide.</h3>
+                <h4>Тo customers worldwide.</h4>
             </div>
         </div>
         <div class="row justify-content-center gx-3">
@@ -57,7 +57,7 @@
                 <div class="col-12">
                     <div class="row justify-content-between align-items-end join-us__header">
                         <div class="col-auto">
-                            <h2>Join us</h2>
+                            <h3>Join us</h3>
                         </div>
                         <div class="col-auto">
                             <a href="#"><h6>More Job offers</h6></a>
@@ -235,40 +235,72 @@
     </div>
 
 </section>
-<section class="feedback">
-    <h3>Get in Touch with us</h3>
-    <p>at EasyTech, we value our customers and appreciate hearing how we can improve and better support you.
-        If you have any question, do not hesitate to contact us!
+<section class="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="contacts__title">Get in Touch with us</h3>
+                <div class="contacts__about-text">
 
-        Sofia, ul.“Okolovrasten pat” 251 G, 1715 g.k. Mladost 4
-        info@easytech.com
-        +359 02 426 36 48</p>
-    <form>
-        <div>
-            <label for="firstName">First Name * </label>
-            <input id="firstName" name="firstName" type="text">
+                    <p>at TechEasy, we value our customers and appreciate hearing how we can improve and better support
+                        you.</p>
+                    <p>If you have any question, do not hesitate to contact us!</p>
+                    <p>Sofia, ul.“Okolovrasten pat” 251 G, 1715 g.k. Mladost 4</p>
+                    <p><a href="mailto:info@easytech.com">info@easytech.com</a></p>
+                    <p>+359 02 426 36 48</p>
+                </div>
+
+                <form>
+                    <div class="contacts__input-container input-container">
+                        <label class="input-container__label" for="firstName">First Name
+                            <span class="input-container__asterisk">*</span>
+                        </label>
+                        <input required class="input-container__input" id="firstName" name="firstName" type="text">
+                        <div class="input-container__divider"></div>
+                    </div>
+                    <div class="contacts__input-container input-container">
+                        <label class="input-container__label" for="lastName">Last Name
+                            <span class="input-container__asterisk">*</span>
+                        </label>
+                        <input required class="input-container__input" id="lastName" name="lastName" type="text">
+                        <div class="input-container__divider"></div>
+
+                    </div>
+                    <div class="contacts__input-container input-container">
+                        <label class="input-container__label" for="phone">Phone <span class="input-container__asterisk">*</span>
+                        </label>
+                        <input required class="input-container__input" id="phone" name="phone" type="text">
+                        <div class="input-container__divider"></div>
+
+                    </div>
+                    <div class="contacts__input-container input-container">
+                        <label class="input-container__label" for="email">Email <span class="input-container__asterisk">*</span>
+                        </label>
+                        <input required class="input-container__input" id="email" name="email" type="text">
+                        <div class="input-container__divider"></div>
+
+                    </div>
+                    <div class="contacts__input-container input-container">
+                        <label class="input-container__label input-container__label_full-width" for="yourMessage">Your
+                            message <span
+                                class="input-container__asterisk">*</span> </label>
+                        <textarea required class="input-container__input input-container__input_full-width"
+                                  name="yourMessage" id="yourMessage" cols="30"
+                                  rows="4">
+
+                        </textarea>
+                        <div class="input-container__divider"></div>
+                    </div>
+                    <div >
+                        <button class="contacts__button">
+                            send message
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div>
-            <label for="lastName">Last Name * </label>
-            <input id="lastName" name="lastName" type="text">
-        </div>
-        <div>
-            <label for="phone">Phone * </label>
-            <input id="phone" name="phone" type="text">
-        </div>
-        <div>
-            <label for="email">Email * </label>
-            <input id="email" name="email" type="text">
-        </div>
-        <div>
-            <label for="yourMessage">Your message * </label>
-            <textarea name="yourMessage" id="yourMessage" cols="30" rows="10"></textarea></div>
-        <div class="button_container">
-            <button>
-                send message
-            </button>
-        </div>
-    </form>
+
+    </div>
 </section>
 <footer class="footer">
     <div>icon</div>

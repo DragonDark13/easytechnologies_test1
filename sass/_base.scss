@@ -1,10 +1,12 @@
+@use "sass:map";
+
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/Inter/Inter-Bold.woff2?v=3.19") format("woff2"),
-  url("../fonts/Inter/Inter-Bold.woff?v=3.19") format("woff");
+  src: url("../fonts/Inter/Bold/Inter-Bold.woff2?v=3.19") format("woff2"),
+  url("../fonts/Inter/Bold/Inter-Bold.woff?v=3.19") format("woff");
 }
 
 @font-face {
@@ -12,8 +14,8 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/Inter/Inter-Medium.woff2?v=3.19") format("woff2"),
-  url("../fonts/Inter/Inter-Medium.woff?v=3.19") format("woff");
+  src: url("../fonts/Inter/Mediun/Inter-Medium.woff2?v=3.19") format("woff2"),
+  url("../fonts/Inter/Mediun/Inter-Medium.woff?v=3.19") format("woff");
 }
 
 @font-face {
@@ -27,6 +29,16 @@
 
 $about__bg-color: #082030;
 $section__header_color: #C8972C;
+
+$spacer: 16px;
+$gutters: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+);
 
 
 body {
@@ -44,6 +56,7 @@ p {
 
 ul {
   padding-left: 0;
+  list-style: none;
 }
 
 h2 {
@@ -58,8 +71,14 @@ h2 {
   margin-bottom: 0;
 }
 
-ul{
-    list-style: none;
+
+h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #C8972C;
 }
 
 h5 {
@@ -74,7 +93,12 @@ h6 {
   line-height: 160%;
 }
 
-img{
+img {
+  max-width: 100%;
+}
+
+textarea {
+  resize: none;
   max-width: 100%;
 }
 
@@ -127,6 +151,7 @@ img{
 @mixin absolute($args...) {
   @include position(absolute, $args...);
 }
+
 @mixin text-shorten {
   overflow: hidden;
   text-overflow: ellipsis;

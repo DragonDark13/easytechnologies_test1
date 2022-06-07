@@ -98,10 +98,70 @@
 
     &__title {
       margin-bottom: 0;
-     @include ellipsis(2);
+      @include ellipsis(2);
     }
 
   }
 
+}
+
+.input-container {
+  display: table;
+  padding-bottom: 10px;
+  position: relative;
+  width: 100%;
+  padding-top: map-get($gutters, 4);
+
+  &__label {
+    display: table-cell;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: #878787;
+    white-space: nowrap;
+    padding-right: map-get($gutters, 1);
+
+    &_full-width {
+      display: block;
+    }
+  }
+
+  &__input {
+    display: table-cell;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: #1F2D3A;
+
+    &_full-width {
+      display: block;
+    }
+
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__divider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #C4C4C4;
+    height: 1px;
+    bottom: 0;
+  }
+
+  &__asterisk {
+    color: $section__header_color;
+  }
 
 }
