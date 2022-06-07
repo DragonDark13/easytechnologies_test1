@@ -204,7 +204,7 @@
 
   &__button {
     margin-top: map-get($gutters, 4);
-    background: linear-gradient(223.08deg, #FFC953 6.11%, #C8972C 97.63%);
+    background: linear-gradient(223.08deg, #FFC953 6.11%, $section__header_color 97.63%);
     border-radius: 45px;
     width: 100%;
     font-style: normal;
@@ -220,5 +220,21 @@
 }
 
 .footer {
+  padding-top: $spacer*1.25;
+  padding-bottom: $spacer*1.25;
   background: $section__header_color;
+
+  .create-a-job-alert-button {
+    width: 100%;
+    margin-top: $spacer*1.25;
+    padding: 6.25px;
+    background: #FFFFFF;
+    border-radius: 46.0973px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $section__header_color;
+  }
 }

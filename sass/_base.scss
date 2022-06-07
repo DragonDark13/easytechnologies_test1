@@ -78,7 +78,7 @@ h3 {
   font-size: 24px;
   line-height: 29px;
   text-transform: uppercase;
-  color: #C8972C;
+  color: $section__header_color;
 }
 
 h4{
@@ -109,6 +109,12 @@ img {
 textarea {
   resize: none;
   max-width: 100%;
+}
+
+button{
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 @mixin css3-prefix($property, $value) {

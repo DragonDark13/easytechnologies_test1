@@ -87,6 +87,12 @@ textarea {
   max-width: 100%;
 }
 
+button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 .header {
   padding-top: 20px;
   background-color: rgba(0, 136, 165, 0.6);
@@ -294,7 +300,22 @@ textarea {
 }
 
 .footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: #C8972C;
+}
+.footer .create-a-job-alert-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 6.25px;
+  background: #FFFFFF;
+  border-radius: 46.0973px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #C8972C;
 }
 
 .job-offers-list__item {
