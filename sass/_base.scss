@@ -191,6 +191,39 @@ $breakpoints: (
   }
 }
 
+@mixin fade($fade, $timing, $length, $count, $fill,$play_state) {
+  animation: $fade $timing $length;
+  animation-iteration-count: $count;
+  animation-fill-mode: $fill;
+  animation-play-state: $play_state;
+}
+
+@keyframes fadeIn {
+  0% {
+    @include opacity(0);
+  }
+  100% {
+    @include opacity(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    @include opacity(1);
+  }
+  100% {
+    @include opacity(0);
+  }
+}
+
+.fadeIn {
+  @include fade(fadeIn, cubic-bezier(0.4, 0, 1, 1), 0.7s, 1, both, running);
+}
+
+.fadeOut {
+  @include fade(fade-out, cubic-bezier(0.4, 0, 1, 1), 0.7s, 1, both, running);
+}
+
 
 body {
   color: #fff;
@@ -292,7 +325,7 @@ button {
 
 .container {
 
-  &.gx-3{
+  &.gx-3 {
     padding-left: $spacer*1.25;
     padding-right: $spacer*1.25;
   }

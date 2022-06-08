@@ -238,5 +238,32 @@
     pointer-events: auto;
   }
 
+}
+
+.slider-control-list {
+  display: flex;
+  align-items: end;
+  margin: 0 -1.5px;
+  width: calc(100% * 1.5 * 2);
+
+  &__item {
+    padding: 0 1.5px;
+
+    .slider-control-item__button {
+      width: 27px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 1px;
+      @include transition();
+
+
+      &_active {
+        height: 7px;
+      }
+    }
+
+
+  }
+
 
 }

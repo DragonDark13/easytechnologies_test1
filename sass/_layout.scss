@@ -3,18 +3,38 @@
 .header {
   padding-top: 20px;
   background-color: rgba(0, 136, 165, 0.6);
-  background-image: url("../image/header__bg-image_mobile.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   //text-align: center;
   overflow: hidden;
   position: relative;
 
 
-  @include respond-above(md) {
-    background-image: url("../image/header__bg-image_desktop.png");
+  .header__bg-block {
+    @include absolute(0, 0, 0, 0);
+    @include square(100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    @include opacity(0);
+    //@include transition();
 
+    &_1 {
+      background-image: url("../image/header__bg-image_mobile1.png");
+
+      @include respond-above(md) {
+        background-image: url("../image/header__bg-image_desktop1.png");
+      }
+
+    }
+
+    &_2 {
+      background-image: url("../image/header__bg-image_mobile2.png");
+
+      @include respond-above(md) {
+        background-image: url("../image/header__bg-image_desktop2.png");
+      }
+
+    }
   }
 
   &:before {
@@ -23,7 +43,7 @@
     @include square(100%);
     background: rgba(0, 136, 165, 0.6);
     @include absolute(0, 0, 0, 0);
-    z-index: 0;
+    z-index: 1;
   }
 
   & > * {
@@ -121,10 +141,10 @@
       width: 186%;
 
       transform-origin: left top;
-          height: 30vw;
-    background: #082030;
-    transform: skew(0, -5deg);
-    bottom: -27vw;
+      height: 30vw;
+      background: #082030;
+      transform: skew(0, -5deg);
+      bottom: -27vw;
     }
   }
 
@@ -146,7 +166,7 @@
     position: relative;
     z-index: 2;
 
-    @include respond-above(xl){
+    @include respond-above(xl) {
       margin-top: -5vw;
     }
   }
@@ -155,7 +175,7 @@
 
 .about {
   padding-top: 18px;
-  @include respond-above(xl){
+  @include respond-above(xl) {
     padding-top: 0;
   }
 
