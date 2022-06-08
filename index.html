@@ -342,13 +342,27 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="contacts__input-container input-container">
-                                        <label class="input-container__label input-container__label_full-width"
-                                               for="yourMessage">Your
-                                            message <span
-                                                    class="input-container__asterisk">*</span> </label>
-                                        <textarea minlength="10" maxlength="100" required
-                                                  class="input-container__input input-container__input_full-width"
-                                                  name="yourMessage" id="yourMessage" cols="30" rows="4"></textarea>
+
+                                        <label
+                                                class="input-container__label input-container__label_full-width d-xl-none"
+                                               for="yourMessage1">Your
+                                            message
+                                            <span
+                                                    class="input-container__asterisk">*</span>
+                                        </label>
+
+                                        <textarea minlength="10" maxlength="100" required class="input-container__input input-container__input_full-width d-xl-none" name="yourMessage" id="yourMessage1" cols="30" rows="4"></textarea>
+
+                                        <label
+                                                class="input-container__label input-container__label_full-width d-none d-xl-block"
+                                               for="yourMessage2">Your
+                                            message
+                                            <span
+                                                    class="input-container__asterisk">*</span>
+                                        </label>
+
+                                        <textarea minlength="10" maxlength="100" required class="input-container__input input-container__input_full-width d-none d-xl-block" name="yourMessage" id="yourMessage2" cols="30" rows="2"></textarea>
+
                                         <div class="input-container__divider"></div>
                                         <div class="input-container__error-text">
                                             *Please write correctly your last message!
@@ -356,7 +370,6 @@
                                     </div>
                                 </div>
                             </div>
-
 
                             <div class="row gx-3 justify-content-center justify-content-xl-start
 ">
