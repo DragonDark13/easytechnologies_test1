@@ -1,8 +1,10 @@
 .job-offers-list {
+  $line_height: 24px;
+  $divider_height: 29px;
 
 
   &__item {
-    border-top: 1px solid #415867;
+    border-top: 1px solid $border_color1;
     padding-top: 15px;
 
     &__number-container {
@@ -11,22 +13,26 @@
     }
 
     &__vertical-divider {
-      position: absolute;
       width: 1px;
-      height: 29px;
-      background-color: #415867;
+      height: $divider_height;
+      background-color: $border_color1;
       display: block;
-      right: 8px;
-      top: -9px;
+      @include absolute(-9px, 8px, auto, auto);
       @include transform(rotate(17deg));
       transform-origin: bottom left;
+
+      @include respond-above(xl) {
+        position: static;
+        display: inline-block;
+        margin-top: -$divider_height - $line_height;
+      }
     }
 
     &__number {
       font-weight: 400;
       font-size: 16px;
       line-height: 19px;
-      color: #415867;
+      color: $border_color1;
 
       @include respond-above(xl) {
         font-size: 20px;
@@ -52,9 +58,9 @@
       margin-top: 5px;
       margin-bottom: 12px;
 
-      @include respond-above(xl){
+      @include respond-above(xl) {
         margin-top: 0;
-        margin-bottom: map-get($gutters,3);
+        margin-bottom: map-get($gutters, 3);
       }
     }
 
@@ -65,7 +71,7 @@
       margin: 0;
       display: block;
       @include transition();
-      background-color: #415867;
+      background-color: $border_color1;
       @include circle(35px);
 
       &:hover {
@@ -109,9 +115,17 @@
 
     &__category {
       @include text-shorten();
+      @include respond-above(xl) {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+      }
     }
 
     &__title {
+      color: #fff;
+      font-weight: 400;
+      text-transform: capitalize;
       margin-bottom: 0;
       @include ellipsis(2);
     }

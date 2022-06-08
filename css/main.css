@@ -8,6 +8,13 @@
 @font-face {
   font-family: "Inter";
   font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Inter/SemiBold/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("../fonts/Inter/SemiBold/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 500;
   font-display: swap;
   src: url("../fonts/Inter/Mediun/Inter-Medium.woff2?v=3.19") format("woff2"), url("../fonts/Inter/Mediun/Inter-Medium.woff?v=3.19") format("woff");
@@ -70,6 +77,12 @@ h4 {
   text-transform: capitalize;
   color: #FFFFFF;
 }
+@media (min-width: 1200px) {
+  h4 {
+    font-size: 28px;
+    line-height: 95.02%;
+  }
+}
 
 h5 {
   font-weight: 400;
@@ -87,6 +100,11 @@ h6 {
   font-weight: 400;
   font-size: 12px;
   line-height: 160%;
+}
+@media (min-width: 1200px) {
+  h6 {
+    font-size: 13px;
+  }
 }
 
 img {
@@ -157,6 +175,10 @@ button {
   .header h4 {
     font-size: 28px;
     line-height: 95.02%;
+  }
+}
+@media (min-width: 1200px) {
+  .header h4 {
     margin-bottom: 44px;
   }
 }
@@ -241,8 +263,13 @@ button {
 }
 @media (min-width: 1200px) {
   .about h4 {
-    margin-right: 0;
     font-size: 28px;
+    line-height: 95.02%;
+  }
+}
+@media (min-width: 1200px) {
+  .about h4 {
+    margin-right: 0;
     margin-bottom: 30px;
   }
 }
@@ -359,7 +386,8 @@ button {
 }
 .contacts__button {
   margin-top: 24px;
-  background: linear-gradient(223.08deg, #FFC953 6.11%, #C8972C 97.63%);
+  background-color: #C8972C;
+  background-image: linear-gradient(223.08deg, #FFC953 6.11%, #C8972C 97.63%);
   border-radius: 45px;
   width: 100%;
   font-style: normal;
@@ -379,13 +407,19 @@ button {
   transition: all 0.3s ease-in-out 0s;
 }
 .contacts__button:hover {
-  background-color: #C8972C;
+  background: #C8972C;
 }
 
 .footer {
   padding-top: 20px;
   padding-bottom: 20px;
   background: #C8972C;
+}
+@media (min-width: 1200px) {
+  .footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 @media (min-width: 1200px) {
   .footer__title {
@@ -436,13 +470,15 @@ button {
   overflow: hidden;
 }
 .job-offers-list__item__vertical-divider {
-  position: absolute;
   width: 1px;
   height: 29px;
   background-color: #415867;
   display: block;
-  right: 8px;
+  position: absolute;
   top: -9px;
+  right: 8px;
+  bottom: auto;
+  left: auto;
   -webkit-transform: rotate(17deg);
   -khtml-transform: rotate(17deg);
   -moz-transform: rotate(17deg);
@@ -450,6 +486,13 @@ button {
   -o-transform: rotate(17deg);
   transform: rotate(17deg);
   transform-origin: bottom left;
+}
+@media (min-width: 1200px) {
+  .job-offers-list__item__vertical-divider {
+    position: static;
+    display: inline-block;
+    margin-top: -53px;
+  }
 }
 .job-offers-list__item__number {
   font-weight: 400;
@@ -540,7 +583,17 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+@media (min-width: 1200px) {
+  .blog-list .blog-item__category {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
 .blog-list .blog-item__title {
+  color: #fff;
+  font-weight: 400;
+  text-transform: capitalize;
   margin-bottom: 0;
   min-width: 0;
   overflow: hidden;

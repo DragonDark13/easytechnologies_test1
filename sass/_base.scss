@@ -11,6 +11,15 @@
 
 @font-face {
   font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Inter/SemiBold/Inter-SemiBold.woff2?v=3.19") format("woff2"),
+       url("../fonts/Inter/SemiBold/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -30,6 +39,7 @@
 $about__bg-color: #082030;
 $section__header_color: #C8972C;
 $error_color: #ED0000;
+$border_color1: #415867;
 
 $spacer: 16px;
 $gutters: (
@@ -226,6 +236,13 @@ h3 {
   color: $section__header_color;
 }
 
+@mixin h4_xl{
+    @include respond-above(xl){
+    font-size: 28px;
+    line-height: 95.02%;
+  }
+}
+
 h4 {
   font-style: normal;
   font-weight: 500;
@@ -233,6 +250,8 @@ h4 {
   line-height: 120%;
   text-transform: capitalize;
   color: #FFFFFF;
+
+  @include h4_xl;
 }
 
 h5 {
@@ -250,6 +269,10 @@ h6 {
   font-weight: 400;
   font-size: 12px;
   line-height: 160%;
+
+  @include respond-above(xl) {
+    font-size: 13px;
+  }
 }
 
 img {
