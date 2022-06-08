@@ -113,10 +113,14 @@
 
 .about-and-join-us {
   background-color: $about__bg-color;
-  background-image: url("../image/join-us__bg-image.svg");
-  background-repeat: round;
+  background-image: url("../image/join-us__bg-image_mobile.svg");
+  background-repeat: no-repeat;
   background-position: center center;
   //background-size: cover;
+
+  @include respond-above(xl){
+      background-image: url("../image/join-us__bg-image_desktop.svg");
+  }
 
 }
 

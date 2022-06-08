@@ -217,9 +217,14 @@ button {
 
 .about-and-join-us {
   background-color: #082030;
-  background-image: url("../image/join-us__bg-image.svg");
-  background-repeat: round;
+  background-image: url("../image/join-us__bg-image_mobile.svg");
+  background-repeat: no-repeat;
   background-position: center center;
+}
+@media (min-width: 1200px) {
+  .about-and-join-us {
+    background-image: url("../image/join-us__bg-image_desktop.svg");
+  }
 }
 
 .about {
