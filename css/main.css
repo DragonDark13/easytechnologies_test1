@@ -374,7 +374,7 @@ button {
   transition: all 0.3s ease-in-out 0s;
 }
 .contacts__button:hover {
-  box-shadow: inset rgba(116, 88, 26, 0.3) 5px -4px 20px 1px;
+  background-color: #C8972C;
 }
 
 .footer {
@@ -395,7 +395,7 @@ button {
 .footer .create-a-job-alert-button {
   width: 100%;
   margin-top: 20px;
-  padding: 5.25px;
+  padding: 6.25px;
   background: #FFFFFF;
   border-radius: 46.0973px;
   font-weight: 500;
@@ -410,18 +410,16 @@ button {
   -ms-transition: all 0.3s ease-in-out 0s;
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
-  border: 1px solid transparent;
 }
 @media (min-width: 576px) {
   .footer .create-a-job-alert-button {
     margin-top: 0;
-    padding: 6.75px;
+    padding: 7.75px;
   }
 }
 .footer .create-a-job-alert-button:hover {
-  background: #C8972C;
+  background: #082030;
   color: #fff;
-  border: 1px solid #fff;
 }
 
 .job-offers-list__item {

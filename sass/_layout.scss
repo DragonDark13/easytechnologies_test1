@@ -279,7 +279,7 @@
     @include transition();
 
     &:hover {
-      box-shadow: inset fade-out(darken($section__header_color, 20%), 0.7) 5px -4px 20px 1px;;
+      background-color: $section__header_color;
     }
   }
 }
@@ -304,7 +304,7 @@
   .create-a-job-alert-button {
     width: 100%;
     margin-top: $spacer*1.25;
-    padding: 5.25px;
+    padding: 6.25px;
     background: #FFFFFF;
     border-radius: 46.0973px;
     font-weight: 500;
@@ -314,18 +314,16 @@
     text-transform: uppercase;
     color: $section__header_color;
     @include transition();
-    border: 1px solid transparent;
 
     @include respond-above(sm) {
       margin-top: 0;
-      padding: 6.75px;
+      padding: 7.75px;
     }
 
 
     &:hover {
-      background: $section__header_color;
+      background: #082030;
       color: #fff;
-      border: 1px solid #fff;
     }
   }
 }
