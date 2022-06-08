@@ -45,7 +45,7 @@ gulp.task('serve', gulp.series('styles', function () {
         gulp.series(['clean', 'styles'])(done);
     });
     gulp.watch("index.html").on('change', browserSync.reload);
-    gulp.watch("js/main.js").on('change', browserSync.reload);
+    gulp.watch("js/*.js").on('change', browserSync.reload);
 }));
 
 

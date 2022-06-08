@@ -3,6 +3,7 @@ const controlsNodeList = document.getElementsByClassName("slider-control-item__b
 const imageArray = Array.from(imageNodeList)
 const controlsArray = Array.from(controlsNodeList)
 let currentSlide = 0;
+const timeOut = 5000;  /*10s*/
 
 
 let fromHideToShow = (elem) => {
@@ -20,8 +21,12 @@ let fromShowToHide = (elem) => {
 // });
 
 function changeSlide(moveTo) {
-    if (moveTo >= imageArray.length) {moveTo = 0;}
-    if (moveTo < 0) {moveTo = imageArray.length - 1;}
+    if (moveTo >= imageArray.length) {
+        moveTo = 0;
+    }
+    if (moveTo < 0) {
+        moveTo = imageArray.length - 1;
+    }
 
     // imageArray[currentSlide].classList.toggle("fadeIn");
     fromShowToHide(imageArray[currentSlide]);
@@ -36,7 +41,46 @@ function changeSlide(moveTo) {
 document.querySelectorAll('.slider-control-item__button').forEach((bullet, bulletIndex) => {
     bullet.addEventListener('click', () => {
         if (currentSlide !== bulletIndex) {
-            changeSlide(bulletIndex);
+            changeSlide(bulletIndex,currentSlide);
         }
     })
 })
+
+
+let nextElem = (index) => {
+
+    if (index === 0) {
+        changeSlide(index)
+
+
+        setTimeout(() => {
+            nextElem(index + 1)
+        }, timeOut)
+
+    } else {
+
+
+
+        changeSlide(index)
+
+
+        if (index < imageArray.length - 1) {
+            setTimeout(() => {
+                nextElem(index + 1);
+
+            }, timeOut)
+        } else {
+            setTimeout(() => {
+                // to first number
+                changeSlide(imageArray.length - 1);
+                nextElem(0)
+
+            }, timeOut)
+        }
+    }
+}
+
+
+nextElem(currentSlide)
+
+console.log("currentSlide", currentSlide);
