@@ -29,7 +29,7 @@
 
 $about__bg-color: #082030;
 $section__header_color: #C8972C;
-$error_color:#ED0000;
+$error_color: #ED0000;
 
 $spacer: 16px;
 $gutters: (
@@ -42,90 +42,13 @@ $gutters: (
 );
 
 $breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
 );
-
-
-body {
-  color: #fff;
-  font-family: Inter, sans-serif;
-}
-
-
-p {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 160%;
-  margin-bottom: 0;
-}
-
-ul {
-  padding-left: 0;
-  list-style: none;
-}
-
-h2 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 150%;
-  letter-spacing: 0em;
-  text-align: left;
-  text-transform: uppercase;
-  color: $section__header_color;
-  margin-bottom: 0;
-}
-
-
-h3 {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  text-transform: uppercase;
-  color: $section__header_color;
-}
-
-h4{
-  font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 120%;
-text-transform: capitalize;
-color: #FFFFFF;
-}
-
-h5 {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-h6 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 160%;
-}
-
-img {
-  max-width: 100%;
-}
-
-textarea {
-  resize: none;
-  max-width: 100%;
-}
-
-button{
-  border: none;
-  outline: none;
-  box-shadow: none;
-}
 
 @mixin css3-prefix($property, $value) {
   -webkit-#{$property}: #{$value};
@@ -196,7 +119,8 @@ button{
     -webkit-box-orient: vertical;
   }
 }
-@mixin opacity($value){
+
+@mixin opacity($value) {
   $IEValue: $value*100;
   opacity: $value;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
@@ -210,6 +134,7 @@ button{
   display: -webkit-flex;
   display: flex;
 }
+
 @mixin flex-wrap($value: wrap) {
   // No Webkit/FF Box fallback.
   -webkit-flex-wrap: $value;
@@ -248,10 +173,97 @@ button{
       @content;
     }
 
-  // If the breakpoint doesn't exist in the map.
+    // If the breakpoint doesn't exist in the map.
   } @else {
 
     // Log a warning.
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
 }
+
+
+body {
+  color: #fff;
+  font-family: Inter, sans-serif;
+}
+
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  color: $section__header_color;
+  margin-bottom: 0;
+
+  @include respond-above(xl) {
+    font-size: 40px;
+  }
+}
+
+
+h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: $section__header_color;
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include respond-above(xl) {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+}
+
+img {
+  max-width: 100%;
+}
+
+textarea {
+  resize: none;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+

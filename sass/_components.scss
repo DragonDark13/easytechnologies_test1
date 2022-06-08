@@ -27,9 +27,15 @@
       font-size: 16px;
       line-height: 19px;
       color: #415867;
+
+      @include respond-above(xl) {
+        font-size: 20px;
+        line-height: 29px;
+      }
     }
 
     .position-list {
+      margin-bottom: 0;
 
       &__position-name {
         display: inline-block;
@@ -45,6 +51,11 @@
     &__show-more-block {
       margin-top: 5px;
       margin-bottom: 12px;
+
+      @include respond-above(xl){
+        margin-top: 0;
+        margin-bottom: map-get($gutters,3);
+      }
     }
 
 
@@ -76,7 +87,8 @@
       position: relative;
       overflow: hidden;
     }
-    &__image{
+
+    &__image {
       width: 100%;
     }
 
