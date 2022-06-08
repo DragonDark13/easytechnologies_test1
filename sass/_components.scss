@@ -32,7 +32,7 @@
     .position-list {
 
       &__position-name {
-        display: block;
+        display: inline-block;
 
         &:after {
           content: '/';
@@ -70,13 +70,16 @@
 
 .blog-list {
 
-
   .blog-item {
 
     &__inner_container {
       position: relative;
       overflow: hidden;
     }
+    &__image{
+      width: 100%;
+    }
+
 
     &__text-content {
       @include absolute(0, 0, 0, 0);

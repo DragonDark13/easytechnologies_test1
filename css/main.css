@@ -100,7 +100,6 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  text-align: center;
   overflow: hidden;
   position: relative;
 }
@@ -121,25 +120,19 @@ button {
   position: relative;
   z-index: 2;
 }
-.header img {
-  display: block;
-  margin: auto;
-}
 .header h1 {
   margin-top: 54px;
   font-size: 43px;
   font-weight: 700;
   line-height: 52px;
-  letter-spacing: 0em;
-  text-align: center;
+  letter-spacing: 0;
   margin-bottom: 10px;
 }
 .header h4 {
   font-size: 22px;
   font-weight: 400;
   line-height: 21px;
-  letter-spacing: 0em;
-  text-align: center;
+  letter-spacing: 0;
   margin-bottom: 75px;
 }
 .header__button {
@@ -333,6 +326,11 @@ button {
   transition: all 0.3s ease-in-out 0s;
   border: 1px solid transparent;
 }
+@media (min-width: 576px) {
+  .footer .create-a-job-alert-button {
+    margin-top: 0;
+  }
+}
 .footer .create-a-job-alert-button:hover {
   background: #C8972C;
   color: #fff;
@@ -370,7 +368,7 @@ button {
   color: #415867;
 }
 .job-offers-list__item .position-list__position-name {
-  display: block;
+  display: inline-block;
 }
 .job-offers-list__item .position-list__position-name:after {
   content: "/";
@@ -403,6 +401,9 @@ button {
 .blog-list .blog-item__inner_container {
   position: relative;
   overflow: hidden;
+}
+.blog-list .blog-item__image {
+  width: 100%;
 }
 .blog-list .blog-item__text-content {
   position: absolute;
