@@ -141,6 +141,10 @@
   width: 100%;
   padding-top: map-get($gutters, 4);
 
+  @include respond-above(xl){
+    padding-top: 18px;
+  }
+
   &__label {
     display: table-cell;
     font-weight: 500;
@@ -204,6 +208,10 @@
     @include transition();
     @include opacity(0);
     pointer-events: none;
+
+    @include respond-above(xl){
+      top: 6px;
+    }
   }
 
   &__asterisk {

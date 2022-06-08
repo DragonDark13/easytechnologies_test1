@@ -610,6 +610,11 @@ button {
   width: 100%;
   padding-top: 24px;
 }
+@media (min-width: 1200px) {
+  .input-container {
+    padding-top: 18px;
+  }
+}
 .input-container__label {
   display: table-cell;
   font-weight: 500;
@@ -689,6 +694,11 @@ button {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
   pointer-events: none;
+}
+@media (min-width: 1200px) {
+  .input-container__error-text {
+    top: 6px;
+  }
 }
 .input-container__asterisk {
   color: #C8972C;
