@@ -29,6 +29,7 @@
 
 $about__bg-color: #082030;
 $section__header_color: #C8972C;
+$error_color:#ED0000;
 
 $spacer: 16px;
 $gutters: (
@@ -132,7 +133,7 @@ button{
   @if length($properties) >= 1 {
     @include css3-prefix('transition', $properties);
   } @else {
-    @include css3-prefix('transition', "all 0.2s ease-in-out 0s");
+    @include css3-prefix('transition', "all 0.3s ease-in-out 0s");
   }
 }
 

@@ -252,43 +252,69 @@
 
                 <form>
                     <div class="contacts__input-container input-container">
-                        <label class="input-container__label" for="firstName">First Name
+                        <label class="input-container__label" for="firstName">
+                            First Name
                             <span class="input-container__asterisk">*</span>
                         </label>
-                        <input required class="input-container__input" id="firstName" name="firstName" type="text">
+
+                        <input minlength="6" maxlength="12" required class="input-container__input" id="firstName"
+                               name="firstName"
+                               type="text">
                         <div class="input-container__divider"></div>
+                        <div class="input-container__error-text">
+                            *Please write correctly your name!
+                        </div>
                     </div>
                     <div class="contacts__input-container input-container">
                         <label class="input-container__label" for="lastName">Last Name
                             <span class="input-container__asterisk">*</span>
                         </label>
-                        <input required class="input-container__input" id="lastName" name="lastName" type="text">
+                        <input minlength="6" maxlength="12" required class="input-container__input" id="lastName"
+                               name="lastName"
+                               type="text">
                         <div class="input-container__divider"></div>
+
+                        <div class="input-container__error-text">
+                            *Please write correctly your last name!
+                        </div>
 
                     </div>
                     <div class="contacts__input-container input-container">
                         <label class="input-container__label" for="phone">Phone <span class="input-container__asterisk">*</span>
                         </label>
-                        <input required class="input-container__input" id="phone" name="phone" type="text">
+                        <input minlength="6" maxlength="12" required class="input-container__input" id="phone"
+                               name="phone"
+                               type="tel">
                         <div class="input-container__divider"></div>
-
+                        <div class="input-container__error-text">
+                            *Please write correctly your last phone!
+                        </div>
                     </div>
                     <div class="contacts__input-container input-container">
                         <label class="input-container__label" for="email">Email <span class="input-container__asterisk">*</span>
                         </label>
-                        <input required class="input-container__input" id="email" name="email" type="text">
+                        <input minlength="6" maxlength="12" required class="input-container__input" id="email"
+                               name="email"
+                               type="email">
                         <div class="input-container__divider"></div>
-
+                        <div class="input-container__error-text">
+                            *Please write correctly your last email!
+                        </div>
                     </div>
                     <div class="contacts__input-container input-container">
                         <label class="input-container__label input-container__label_full-width" for="yourMessage">Your
                             message <span
                                     class="input-container__asterisk">*</span> </label>
-                        <textarea required class="input-container__input input-container__input_full-width" name="yourMessage" id="yourMessage" cols="30" rows="4"></textarea>
+                        <textarea minlength="10" maxlength="100" required
+                                  class="input-container__input input-container__input_full-width"
+                                  name="yourMessage" id="yourMessage" cols="30" rows="4"></textarea>
                         <div class="input-container__divider"></div>
+                        <div class="input-container__error-text">
+                            *Please write correctly your last message!
+                        </div>
                     </div>
                     <div>
-                        <button class="contacts__button">
+                        <button type="submit" class="contacts__button">
                             send message
                         </button>
                     </div>

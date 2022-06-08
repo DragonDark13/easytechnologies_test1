@@ -151,17 +151,52 @@
   }
 
   &__divider {
+    @include absolute(auto, 0, 0, 0);
     position: absolute;
-    left: 0;
-    right: 0;
     width: 100%;
     background: #C4C4C4;
     height: 1px;
-    bottom: 0;
+
+    &:before {
+      @include absolute(0, auto, auto, 0);
+      content: '';
+      width: 0;
+      height: 1px;
+      background-color: transparent;
+      @include transition();
+    }
+  }
+
+  &__error-text {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 150%;
+    color: $error_color;
+    @include absolute(13px, auto, auto, 0);
+    @include transition();
+    opacity: 0;
+    pointer-events: none;
   }
 
   &__asterisk {
     color: $section__header_color;
   }
+
+
+  &__input:invalid:focus ~ &__divider:before {
+    width: 100%;
+    background-color: $error_color;
+  }
+
+  &__input:valid:focus ~ &__divider:before {
+    width: 100%;
+    background-color: green;
+  }
+
+  &__input:invalid:focus ~ &__error-text {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
 
 }
