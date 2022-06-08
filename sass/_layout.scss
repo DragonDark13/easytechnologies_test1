@@ -11,6 +11,12 @@
   overflow: hidden;
   position: relative;
 
+
+  @include respond-above(md) {
+    background-image: url("../image/header__bg-image_desktop.png");
+
+  }
+
   &:before {
     content: '';
     pointer-events: none;
@@ -25,10 +31,6 @@
     z-index: 2;
   }
 
-  img {
-    //display: block;
-    //margin: auto;
-  }
 
   h1 {
     margin-top: 54px;
@@ -64,7 +66,7 @@
   &__button {
     $header__button_bg: rgba(58, 160, 182);
     $header__button_hover__bg: fade-out($header__button_bg, 0);
-    $header__button_default__bg: fade-out($header__button_bg, 0.5);
+    $header__button_default__bg: fade-out($header__button_bg, 0.7);
 
     display: block;
     width: 100%;
@@ -98,17 +100,31 @@
     position: relative;;
 
     &:after {
-      transform-origin: top left;
+      ////transform-origin: top left;
+      //content: "";
+      //position: absolute;
+      //display: block;
+      //top: 100%;
+      //left: 0;
+      //right: 0;
+      ////@include transform(rotate(351deg) skewX(358deg));
+      //width: 179%;
+      //height: 68px;
+      //background: $about__bg-color;
+
       content: "";
-      position: absolute;
+      /* position: absolute; */
       display: block;
-      top: 100%;
+      /* top: calc(100vw * 29.00005); */
       left: 0;
       right: 0;
-      @include transform(rotate(351deg) skewX(358deg));
-      width: 179%;
-      height: 68px;
-      background: $about__bg-color;
+      width: 186%;
+
+      transform-origin: left top;
+          height: 30vw;
+    background: #082030;
+    transform: skew(0, -5deg);
+    bottom: -27vw;
     }
   }
 
@@ -125,10 +141,23 @@
     background-image: url("../image/join-us__bg-image_desktop.svg");
   }
 
+
+  & > .container {
+    position: relative;
+    z-index: 2;
+
+    @include respond-above(xl){
+      margin-top: -5vw;
+    }
+  }
+
 }
 
 .about {
   padding-top: 18px;
+  @include respond-above(xl){
+    padding-top: 0;
+  }
 
 
   h4 {

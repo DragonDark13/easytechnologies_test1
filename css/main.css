@@ -122,6 +122,12 @@ button {
   box-shadow: none;
 }
 
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1185px;
+  }
+}
+
 .header {
   padding-top: 20px;
   background-color: rgba(0, 136, 165, 0.6);
@@ -131,6 +137,11 @@ button {
   background-position: center center;
   overflow: hidden;
   position: relative;
+}
+@media (min-width: 768px) {
+  .header {
+    background-image: url("../image/header__bg-image_desktop.png");
+  }
 }
 .header:before {
   content: "";
@@ -185,7 +196,7 @@ button {
 .header__button {
   display: block;
   width: 100%;
-  background: rgba(58, 160, 182, 0.5);
+  background: rgba(58, 160, 182, 0.3);
   border: 1px solid #FFFFFF;
   border-radius: 35px;
   font-size: 14px;
@@ -219,22 +230,18 @@ button {
   position: relative;
 }
 .header__triangle-bg:after {
-  transform-origin: top left;
   content: "";
-  position: absolute;
+  /* position: absolute; */
   display: block;
-  top: 100%;
+  /* top: calc(100vw * 29.00005); */
   left: 0;
   right: 0;
-  -webkit-transform: rotate(351deg) skewX(358deg);
-  -khtml-transform: rotate(351deg) skewX(358deg);
-  -moz-transform: rotate(351deg) skewX(358deg);
-  -ms-transform: rotate(351deg) skewX(358deg);
-  -o-transform: rotate(351deg) skewX(358deg);
-  transform: rotate(351deg) skewX(358deg);
-  width: 179%;
-  height: 68px;
+  width: 186%;
+  transform-origin: left top;
+  height: 30vw;
   background: #082030;
+  transform: skew(0, -5deg);
+  bottom: -27vw;
 }
 
 .about-and-join-us {
@@ -248,9 +255,23 @@ button {
     background-image: url("../image/join-us__bg-image_desktop.svg");
   }
 }
+.about-and-join-us > .container {
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 1200px) {
+  .about-and-join-us > .container {
+    margin-top: -5vw;
+  }
+}
 
 .about {
   padding-top: 18px;
+}
+@media (min-width: 1200px) {
+  .about {
+    padding-top: 0;
+  }
 }
 .about h4 {
   font-weight: 400;
@@ -517,9 +538,6 @@ button {
 }
 .job-offers-list__item .position-list {
   margin-bottom: 0;
-}
-.job-offers-list__item .position-list__position-name {
-  display: inline-block;
 }
 .job-offers-list__item .position-list__position-name:after {
   content: "/";
