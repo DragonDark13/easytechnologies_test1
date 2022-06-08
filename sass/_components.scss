@@ -174,7 +174,7 @@
     color: $error_color;
     @include absolute(13px, auto, auto, 0);
     @include transition();
-    opacity: 0;
+    @include opacity(0);
     pointer-events: none;
   }
 
@@ -194,7 +194,7 @@
   }
 
   &__input:invalid:focus ~ &__error-text {
-    opacity: 1;
+    @include opacity(1);
     pointer-events: auto;
   }
 
