@@ -229,7 +229,7 @@
       background-color: $section__header_color;
 
       @include respond-above(xl) {
-        $top_pos: math.div($header_title_height_xl,2);
+        $top_pos: math.div($header_title_height_xl, 2);
         width: calc(100% - map-get($gutters, 3));
         @include absolute($top_pos, map-get($gutters, 2), auto, map-get($gutters, 2));
         z-index: 0;
@@ -261,6 +261,11 @@
 
   &__about-text {
     padding-bottom: $spacer*2.5 - map-get($gutters,4);
+
+    hr {
+      margin-bottom: 8px;
+      width: 40px;
+    }
 
     a {
       color: #082030;

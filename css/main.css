@@ -378,6 +378,10 @@ button {
 .contacts__about-text {
   padding-bottom: 16px;
 }
+.contacts__about-text hr {
+  margin-bottom: 8px;
+  width: 40px;
+}
 .contacts__about-text a {
   color: #082030;
 }
@@ -464,6 +468,11 @@ button {
 .job-offers-list__item {
   border-top: 1px solid #415867;
   padding-top: 15px;
+}
+@media (min-width: 1200px) {
+  .job-offers-list__item {
+    padding-top: 20px;
+  }
 }
 .job-offers-list__item__number-container {
   position: relative;

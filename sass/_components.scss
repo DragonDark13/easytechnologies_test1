@@ -7,6 +7,10 @@
     border-top: 1px solid $border_color1;
     padding-top: 15px;
 
+    @include respond-above(xl) {
+      padding-top: $spacer*1.25;
+    }
+
     &__number-container {
       position: relative;
       overflow: hidden;
@@ -141,7 +145,7 @@
   width: 100%;
   padding-top: map-get($gutters, 4);
 
-  @include respond-above(xl){
+  @include respond-above(xl) {
     padding-top: 18px;
   }
 
@@ -209,7 +213,7 @@
     @include opacity(0);
     pointer-events: none;
 
-    @include respond-above(xl){
+    @include respond-above(xl) {
       top: 6px;
     }
   }
