@@ -291,7 +291,13 @@ button {
 }
 
 .container {
+
+  &.gx-3{
+    padding-left: $spacer*1.25;
+    padding-right: $spacer*1.25;
+  }
+
   @include respond-above(xxl) {
-    max-width: 1185px;
+    max-width: 1170px + $spacer*2.5;
   }
 }
