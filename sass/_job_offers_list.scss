@@ -1,0 +1,157 @@
+.job-offers-list {
+  $line_height: 24px;
+  $divider_height: 29px;
+
+
+  &__item {
+    border-top: 1px solid $border_color1;
+    padding-top: 15px;
+
+    @include respond-above(xl) {
+      padding-top: $spacer*1.25;
+    }
+
+    &__number-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &__vertical-divider {
+      width: 1px;
+      height: $divider_height;
+      background-color: $border_color1;
+      display: block;
+      @include absolute(-9px, 8px, auto, auto);
+      @include transform(rotate(17deg));
+      transform-origin: bottom left;
+
+      @include respond-above(xl) {
+        position: static;
+        display: inline-block;
+        margin-top: -$divider_height - $line_height;
+      }
+    }
+
+    &__number {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $border_color1;
+
+      @include respond-above(xl) {
+        font-size: 20px;
+        line-height: 29px;
+      }
+    }
+
+    .position-list {
+      margin-bottom: 0;
+
+      &__position-name {
+        //display: inline-block;
+
+        &:after {
+          content: '/';
+          padding-left: 5px;
+        }
+
+      }
+    }
+
+    &__show-more-block {
+      margin-top: 5px;
+      margin-bottom: 12px;
+
+      @include respond-above(xl) {
+        margin-top: 0;
+        margin-bottom: map-get($gutters, 3);
+      }
+    }
+
+    @mixin show_hide_btn() {
+      cursor: pointer;
+      border: none;
+      margin: 0;
+      @include flexbox;
+      @include justify-content(center);
+      align-items: center;
+      @include align-items(center);
+      @include transition();
+      background-color: $border_color1;
+      @include circle(30px);
+
+      img {
+        width: 12px;
+      }
+
+      @include respond-above(xl) {
+        @include circle(35px);
+
+        img {
+          width: 14px;
+        }
+      }
+
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+
+
+    .job-offers-list-item__toggle-elem {
+      @include show_hide_btn;
+
+    }
+
+    .job-offers-list-item__more-details-container {
+      padding-top: map-get($gutters, 3);
+      color: #8095A4;
+      padding-bottom: 30px;
+
+      p {
+        margin-bottom: map-get($gutters, 3);
+      }
+    }
+
+    .job-offers-list-item__show-less-btn-container {
+      padding-left: 0;
+    }
+
+    &:not(.job-offers-list-item_show-more) {
+
+      .job-offers-list-item__more-details-container {
+        display: none;
+      }
+
+      .job-offers-list-item__show-less-btn-container {
+        display: none;
+      }
+
+    }
+
+    &.job-offers-list-item_show-more {
+
+      .job-offers-list-item__show-less-btn-container {
+        display: flex;
+      }
+
+      .job-offers-list-item__show-more-button-container {
+        display: none;
+      }
+
+    }
+
+    .dots-list {
+      @include flexbox;
+
+      li {
+        margin-right: map-get($gutters, 1);
+        @include circle(map-get($gutters, 1));
+        background: $bg_colo_gray;
+      }
+    }
+
+  }
+
+}

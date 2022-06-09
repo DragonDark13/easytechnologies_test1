@@ -1,0 +1,59 @@
+.contacts {
+  background: #F7F7F7;
+  color: #8095A4;
+  padding-top: $spacer*2.5;
+  padding-bottom: $spacer*2.5;
+
+  &__title {
+    text-transform: none;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #1F2D3A;
+
+    @include respond-above(xl) {
+      font-size: 32px;
+      line-height: 150%;
+      margin-bottom: 22px;
+
+    }
+  }
+
+  &__about-text {
+    padding-bottom: $spacer*2.5 - map-get($gutters,4);
+
+    hr {
+      margin-bottom: 8px;
+      width: 40px;
+    }
+
+    a {
+      color: $about__bg-color;
+    }
+
+    p {
+      margin-bottom: map-get($gutters, 2);
+    }
+  }
+
+  &__button {
+    margin-top: map-get($gutters, 4);
+    background-color: $section__header_color;
+    background-image: linear-gradient(223.08deg, #FFC953 6.11%, $section__header_color 97.63%);
+    border-radius: 45px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+    padding: 18px;
+    @include transition();
+
+    &:hover {
+      background: $section__header_color;
+    }
+  }
+}

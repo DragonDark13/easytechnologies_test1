@@ -1,0 +1,77 @@
+
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  color: $section__header_color;
+  margin-bottom: 0;
+
+  @include respond-above(xl) {
+    font-size: 40px;
+  }
+}
+
+
+h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: $section__header_color;
+}
+
+@mixin h4_xl {
+  @include respond-above(xl) {
+    font-size: 28px;
+    line-height: 95.02%;
+  }
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: capitalize;
+  color: #FFFFFF;
+
+  @include h4_xl;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+
+  @include respond-above(xl) {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 160%;
+
+  @include respond-above(xl) {
+    font-size: 13px;
+  }
+}

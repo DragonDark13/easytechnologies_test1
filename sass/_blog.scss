@@ -1,0 +1,61 @@
+@use "sass:math";
+
+.blog-news {
+  padding-bottom: 26px - map-get($gutters,3);
+  padding-top: $spacer*2;
+  $header_title_height_xl: 39px;
+
+
+  @include respond-above(xl) {
+    padding-bottom: map-get($gutters, 3);
+  }
+
+
+  &__header-bg {
+    @include respond-above(xl) {
+      position: relative;
+      z-index: 2;
+      background: #fff;
+    }
+  }
+
+  &__title {
+    @include respond-above(xl) {
+      font-size: 32px;
+      line-height: $header_title_height_xl;
+    }
+  }
+
+  &__view-more {
+    text-decoration: none;
+    cursor: pointer;
+    color: $section__header_color;
+    display: block;
+
+    &:hover {
+      color: $section__header_color;
+    }
+  }
+
+
+  &__header-container {
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+
+    .header-container__divider {
+      width: 100%;
+      height: 1px;
+      background-color: $section__header_color;
+
+      @include respond-above(xl) {
+        $top_pos: math.div($header_title_height_xl, 2);
+        width: calc(100% - map-get($gutters, 3));
+        @include absolute($top_pos, map-get($gutters, 2), auto, map-get($gutters, 2));
+        z-index: 0;
+      }
+    }
+  }
+
+}

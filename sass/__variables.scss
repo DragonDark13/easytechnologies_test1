@@ -1,0 +1,24 @@
+$about__bg-color: #082030;
+$section__header_color: #C8972C;
+$error_color: #ED0000;
+$border_color1: #415867;
+$bg_colo_gray: #C4C4C4;
+
+$spacer: 16px;
+$gutters: (
+        0: 0,
+        1: $spacer * .25,
+        2: $spacer * .5,
+        3: $spacer,
+        4: $spacer * 1.5,
+        5: $spacer * 3,
+);
+
+$breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);

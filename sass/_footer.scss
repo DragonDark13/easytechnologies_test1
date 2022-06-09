@@ -1,0 +1,48 @@
+.footer {
+  padding-top: $spacer*1.25;
+  padding-bottom: $spacer*1.25;
+  background: $section__header_color;
+
+  @include respond-above(xl) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__title {
+    @include respond-above(xl) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    @include respond-above(xl) {
+      width: $spacer*2.5;
+    }
+  }
+
+  .create-a-job-alert-button {
+    width: 100%;
+    margin-top: $spacer*1.25;
+    padding: 6.25px;
+    background: #FFFFFF;
+    border-radius: 46.0973px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    color: $section__header_color;
+    @include transition();
+
+    @include respond-above(sm) {
+      margin-top: 0;
+      padding: 7.75px;
+    }
+
+
+    &:hover {
+      background: $about__bg-color;
+      color: #fff;
+    }
+  }
+}

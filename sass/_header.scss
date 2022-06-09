@@ -1,0 +1,129 @@
+.header {
+  padding-top: 20px;
+  background-color: rgba(0, 136, 165, 0.6);
+  overflow: hidden;
+  position: relative;
+
+
+  .header__bg-block {
+    @include absolute(0, 0, 0, 0);
+    @include square(100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: 0;
+    @include opacity(0);
+
+    &_1 {
+      background-image: url("../image/header_slider/header__bg-image_mobile1.png");
+
+      @include respond-above(md) {
+        background-image: url("../image/header_slider/header__bg-image_desktop1.png");
+      }
+
+    }
+
+    &_2 {
+      background-image: url("../image/header_slider/header__bg-image_mobile2.png");
+
+      @include respond-above(md) {
+        background-image: url("../image/header_slider/header__bg-image_desktop2.png");
+      }
+
+    }
+  }
+
+  &:before {
+    content: '';
+    pointer-events: none;
+    @include square(100%);
+    background: rgba(0, 136, 165, 0.6);
+    @include absolute(0, 0, 0, 0);
+    z-index: 1;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+
+  h1 {
+    margin-top: 54px;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+
+    @include respond-above(xxl) {
+      font-size: 80px;
+      line-height: 100%;
+      margin-bottom: $spacer*1.25;
+    }
+
+  }
+
+  h4 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0;
+    margin-bottom: 75px;
+
+    @include h4_xl;
+    @include respond-above(xl) {
+      //font-size: 28px;
+      //line-height: 95.02%;
+      margin-bottom: 44px;
+    }
+  }
+
+  &__button {
+    $header__button_bg: rgba(58, 160, 182);
+    $header__button_hover__bg: fade-out($header__button_bg, 0);
+    $header__button_default__bg: fade-out($header__button_bg, 0.7);
+
+    display: block;
+    width: 100%;
+    background: $header__button_default__bg;
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 11.5px 17px;
+    margin-bottom: 114px;
+    @include transition();
+
+    &:hover {
+      background: $header__button_hover__bg;
+    }
+
+    @include respond-above(xl) {
+      margin-bottom: 90px;
+    }
+  }
+
+  &__triangle-bg {
+    width: 100%;
+    height: 0;
+    padding-top: 55px;
+    position: relative;;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 186%;
+      transform-origin: left top;
+      height: 30vw;
+      background: $about__bg-color;
+      @include transform(skew(0, -5deg));
+    }
+  }
+
+}
