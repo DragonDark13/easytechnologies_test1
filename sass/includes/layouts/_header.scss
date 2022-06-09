@@ -15,19 +15,19 @@
     @include opacity(0);
 
     &_1 {
-      background-image: url("../image/header_slider/header__bg-image_mobile1.png");
+      background-image: url("../../../image/header_slider/header__bg-image_mobile1.png");
 
       @include respond-above(md) {
-        background-image: url("../image/header_slider/header__bg-image_desktop1.png");
+        background-image: url("../../../image/header_slider/header__bg-image_desktop1.png");
       }
 
     }
 
     &_2 {
-      background-image: url("../image/header_slider/header__bg-image_mobile2.png");
+      background-image: url("../../../image/header_slider/header__bg-image_mobile2.png");
 
       @include respond-above(md) {
-        background-image: url("../image/header_slider/header__bg-image_desktop2.png");
+        background-image: url("../../../image/header_slider/header__bg-image_desktop2.png");
       }
 
     }

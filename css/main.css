@@ -41,28 +41,28 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/Inter/Bold/Inter-Bold.woff2?v=3.19") format("woff2"), url("../fonts/Inter/Bold/Inter-Bold.woff?v=3.19") format("woff");
+  src: url("../../../fonts/Inter/Bold/Inter-Bold.woff2?v=3.19") format("woff2"), url("../../../fonts/Inter/Bold/Inter-Bold.woff?v=3.19") format("woff");
 }
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../fonts/Inter/SemiBold/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("../fonts/Inter/SemiBold/Inter-SemiBold.woff?v=3.19") format("woff");
+  src: url("../../../fonts/Inter/SemiBold/Inter-SemiBold.woff2?v=3.19") format("woff2"), url("../../../fonts/Inter/SemiBold/Inter-SemiBold.woff?v=3.19") format("woff");
 }
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/Inter/Mediun/Inter-Medium.woff2?v=3.19") format("woff2"), url("../fonts/Inter/Mediun/Inter-Medium.woff?v=3.19") format("woff");
+  src: url("../../../fonts/Inter/Mediun/Inter-Medium.woff2?v=3.19") format("woff2"), url("../../../fonts/Inter/Mediun/Inter-Medium.woff?v=3.19") format("woff");
 }
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/Inter/Regular/Inter-Regular.woff2?v=3.19") format("woff2"), url("../fonts/Inter/Regular/Inter-Regular.woff?v=3.19") format("woff");
+  src: url("../../../fonts/Inter/Regular/Inter-Regular.woff2?v=3.19") format("woff2"), url("../../../fonts/Inter/Regular/Inter-Regular.woff?v=3.19") format("woff");
 }
 body {
   color: #fff;
@@ -193,19 +193,19 @@ h6 {
   filter: alpha(opacity=0);
 }
 .header .header__bg-block_1 {
-  background-image: url("../image/header_slider/header__bg-image_mobile1.png");
+  background-image: url("../../../image/header_slider/header__bg-image_mobile1.png");
 }
 @media (min-width: 768px) {
   .header .header__bg-block_1 {
-    background-image: url("../image/header_slider/header__bg-image_desktop1.png");
+    background-image: url("../../../image/header_slider/header__bg-image_desktop1.png");
   }
 }
 .header .header__bg-block_2 {
-  background-image: url("../image/header_slider/header__bg-image_mobile2.png");
+  background-image: url("../../../image/header_slider/header__bg-image_mobile2.png");
 }
 @media (min-width: 768px) {
   .header .header__bg-block_2 {
-    background-image: url("../image/header_slider/header__bg-image_desktop2.png");
+    background-image: url("../../../image/header_slider/header__bg-image_desktop2.png");
   }
 }
 .header:before {
@@ -314,13 +314,13 @@ h6 {
 
 .about-and-join-us {
   background-color: #082030;
-  background-image: url("../image/join-us__bg-image_mobile.svg");
+  background-image: url("../../../image/join-us__bg-image_mobile.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
 @media (min-width: 1200px) {
   .about-and-join-us {
-    background-image: url("../image/join-us__bg-image_desktop.svg");
+    background-image: url("../../../image/join-us__bg-image_desktop.svg");
   }
 }
 .about-and-join-us > .container {

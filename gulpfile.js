@@ -4,7 +4,6 @@ const del = require('del');
 const browserSync = require('browser-sync').create();
 
 // Compile sass into CSS & auto-inject into browsers
-
 gulp.task('styles', () => {
     return gulp.src('sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
@@ -37,7 +36,6 @@ gulp.task('browser-sync', function () {
 
 // Static Server + watching scss/html files
 gulp.task('serve', gulp.series('styles', function () {
-
     browserSync.init({
         server: "./"
     });
