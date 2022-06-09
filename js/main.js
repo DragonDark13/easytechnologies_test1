@@ -33,7 +33,7 @@ function changeSlide(moveTo) {
 document.querySelectorAll('.slider-control-item__button').forEach((bullet, bulletIndex) => {
     bullet.addEventListener('click', () => {
         if (currentSlide !== bulletIndex) {
-            changeSlide(bulletIndex,currentSlide);
+            changeSlide(bulletIndex, currentSlide);
         }
     })
 })
@@ -72,31 +72,38 @@ let nextElem = (index) => {
 nextElem(currentSlide)
 
 class AboutUsAccordion {
-  constructor(target, config) {
-    this._el = typeof target === 'string' ? document.querySelector(target) : target;
-    const defaultConfig = {
-      alwaysOpen: true
-    };
-    this._config = Object.assign(defaultConfig, config);
-    this.addEventListener();
-  }
-  addEventListener() {
-    this._el.addEventListener('click', (e) => {
-      const elHeader = e.target.closest('.job-offers-list-item__toggle-elem');
-      if (!elHeader) {
-        return;
-      }
-      if (!this._config.alwaysOpen) {
-        const elOpenItem = this._el.querySelector('.job-offers-list-item_show-more');
-        if (elOpenItem) {
-          elOpenItem !== elHeader.closest('.job-offers-list-item') ? elOpenItem.classList.toggle('job-offers-list-item_show-more') : null;
-        }
-      }
-      elHeader.closest('.job-offers-list-item').classList.toggle('job-offers-list-item_show-more');
-    });
-  }
+    constructor(target, config) {
+        this._el = typeof target === 'string' ? document.querySelector(target) : target;
+        const defaultConfig = {
+            alwaysOpen: true
+        };
+        this._config = Object.assign(defaultConfig, config);
+        this.addEventListener();
+    }
+
+    addEventListener() {
+        this._el.addEventListener('click', (e) => {
+            const elHeader = e.target.closest('.job-offers-list-item__toggle-elem');
+            if (!elHeader) {
+                return;
+            }
+            if (!this._config.alwaysOpen) {
+                const elOpenItem = this._el.querySelector('.job-offers-list-item_show-more');
+                if (elOpenItem) {
+                    elOpenItem !== elHeader.closest('.job-offers-list-item') ? elOpenItem.classList.toggle('job-offers-list-item_show-more') : null;
+                }
+            }
+            elHeader.closest('.job-offers-list-item').classList.toggle('job-offers-list-item_show-more');
+        });
+    }
 }
 
 new AboutUsAccordion(document.querySelector('.job-offers-list'), {
-  alwaysOpen: false
+    alwaysOpen: false
 });
+
+
+document.querySelector('.create-a-job-alert-button').addEventListener('click', () => {
+    alert("Stay for Ukraine");
+})
+
