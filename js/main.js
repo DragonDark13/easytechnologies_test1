@@ -84,3 +84,34 @@ let nextElem = (index) => {
 nextElem(currentSlide)
 
 console.log("currentSlide", currentSlide);
+
+
+class ItcAccordion {
+  constructor(target, config) {
+    this._el = typeof target === 'string' ? document.querySelector(target) : target;
+    const defaultConfig = {
+      alwaysOpen: true
+    };
+    this._config = Object.assign(defaultConfig, config);
+    this.addEventListener();
+  }
+  addEventListener() {
+    this._el.addEventListener('click', (e) => {
+      const elHeader = e.target.closest('.job-offers-list-item__toggle-elem');
+      if (!elHeader) {
+        return;
+      }
+      if (!this._config.alwaysOpen) {
+        const elOpenItem = this._el.querySelector('.job-offers-list-item_show-more');
+        if (elOpenItem) {
+          elOpenItem !== elHeader.closest('.job-offers-list-item') ? elOpenItem.classList.toggle('job-offers-list-item_show-more') : null;
+        }
+      }
+      elHeader.closest('.job-offers-list-item').classList.toggle('job-offers-list-item_show-more');
+    });
+  }
+}
+
+new ItcAccordion(document.querySelector('.accordion'), {
+  alwaysOpen: false
+});

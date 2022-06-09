@@ -68,23 +68,91 @@
       }
     }
 
-
-    &__show-more-button {
+    @mixin show_hide_btn() {
       cursor: pointer;
       border: none;
       margin: 0;
-      display: block;
+      @include flexbox;
+      @include justify-content(center);
+      align-items: center;
+      @include align-items(center);
       @include transition();
       background-color: $border_color1;
-      @include circle(35px);
+      @include circle(30px);
+
+      img {
+        width: 12px;
+      }
+
+      @include respond-above(xl) {
+        @include circle(35px);
+
+        img {
+          width: 14px;
+        }
+      }
+
 
       &:hover {
         background-color: #fff;
       }
     }
 
-  }
 
+    .job-offers-list-item__toggle-elem {
+      @include show_hide_btn;
+
+    }
+
+    .job-offers-list-item__more-details-container {
+      padding-top: map-get($gutters, 3);
+      color: #8095A4;
+      padding-bottom: 30px;
+
+      p {
+        margin-bottom: map-get($gutters, 3);
+      }
+    }
+
+    .job-offers-list-item__show-less-btn-container {
+      padding-left: 0;
+    }
+
+    &:not(.job-offers-list-item_show-more) {
+
+      .job-offers-list-item__more-details-container {
+        display: none;
+      }
+
+      .job-offers-list-item__show-less-btn-container {
+        display: none;
+      }
+
+    }
+
+    &.job-offers-list-item_show-more {
+
+      .job-offers-list-item__show-less-btn-container {
+        display: flex;
+      }
+
+      .job-offers-list-item__show-more-button-container {
+        display: none;
+      }
+
+    }
+
+    .dots-list {
+      @include flexbox;
+
+      li {
+        margin-right: map-get($gutters, 1);
+        @include circle(map-get($gutters, 1));
+        background: $bg_colo_gray;
+      }
+    }
+
+  }
 
 }
 
@@ -190,7 +258,7 @@
   &__divider {
     @include absolute(auto, 0, 0, 0);
     width: 100%;
-    background: #C4C4C4;
+    background: $bg_colo_gray;
     height: 1px;
 
     &:before {
@@ -267,3 +335,7 @@
 
 
 }
+
+
+
+
