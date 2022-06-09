@@ -71,7 +71,7 @@ let nextElem = (index) => {
 
 nextElem(currentSlide)
 
-class ItcAccordion {
+class AboutUsAccordion {
   constructor(target, config) {
     this._el = typeof target === 'string' ? document.querySelector(target) : target;
     const defaultConfig = {
@@ -97,6 +97,6 @@ class ItcAccordion {
   }
 }
 
-new ItcAccordion(document.querySelector('.job-offers-list'), {
+new AboutUsAccordion(document.querySelector('.job-offers-list'), {
   alwaysOpen: false
 });
