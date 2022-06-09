@@ -280,6 +280,9 @@ h6 {
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
+.header__button input[type=file] {
+  display: none;
+}
 .header__button:hover {
   background: #3aa0b6;
 }

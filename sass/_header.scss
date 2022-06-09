@@ -100,6 +100,10 @@
     margin-bottom: 114px;
     @include transition();
 
+    input[type="file"] {
+      display: none;
+    }
+
     &:hover {
       background: $header__button_hover__bg;
     }
