@@ -3,7 +3,7 @@ const controlsNodeList = document.getElementsByClassName("slider-control-item__b
 const imageArray = Array.from(imageNodeList)
 const controlsArray = Array.from(controlsNodeList)
 let currentSlide = 0;
-const timeOut = 5000;  /*10s*/
+const timeOut = 5000;
 
 
 let fromHideToShow = (elem) => {
@@ -16,10 +16,6 @@ let fromShowToHide = (elem) => {
     elem.classList.add("fadeOut")
 }
 
-// controlsArray[0].addEventListener('click', function () {
-//     fromShowToHide(imageArray[0])
-// });
-
 function changeSlide(moveTo) {
     if (moveTo >= imageArray.length) {
         moveTo = 0;
@@ -27,14 +23,10 @@ function changeSlide(moveTo) {
     if (moveTo < 0) {
         moveTo = imageArray.length - 1;
     }
-
-    // imageArray[currentSlide].classList.toggle("fadeIn");
     fromShowToHide(imageArray[currentSlide]);
     controlsArray[currentSlide].classList.toggle("slider-control-item__button_active");
-    // imageArray[moveTo].classList.toggle("fadeIn");
     fromHideToShow(imageArray[moveTo]);
     controlsArray[moveTo].classList.toggle("slider-control-item__button_active");
-
     currentSlide = moveTo;
 }
 
@@ -59,10 +51,7 @@ let nextElem = (index) => {
 
     } else {
 
-
-
         changeSlide(index)
-
 
         if (index < imageArray.length - 1) {
             setTimeout(() => {
@@ -80,11 +69,7 @@ let nextElem = (index) => {
     }
 }
 
-
 nextElem(currentSlide)
-
-console.log("currentSlide", currentSlide);
-
 
 class ItcAccordion {
   constructor(target, config) {
@@ -112,6 +97,6 @@ class ItcAccordion {
   }
 }
 
-new ItcAccordion(document.querySelector('.accordion'), {
+new ItcAccordion(document.querySelector('.job-offers-list'), {
   alwaysOpen: false
 });
